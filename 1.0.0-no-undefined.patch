@@ -1,0 +1,43 @@
+https://bugs.kde.org/show_bug.cgi?id=293081
+
+--- origsrc/oxygen-gtk3-1.0.0/src/animations/oxygentreeviewdata.cpp	2012-01-16 02:46:33.000000000 -0600
++++ src/oxygen-gtk3-1.0.0/src/animations/oxygentreeviewdata.cpp	2012-02-13 00:35:23.003557300 -0600
+@@ -256,18 +256,6 @@ namespace Oxygen
+     }
+ 
+     //________________________________________________________________________________
+-    void TreeViewData::columnsChanged( GtkTreeView*, gpointer data )
+-    {
+-
+-        #if OXYGEN_DEBUG
+-        std::cerr << "Oxygen::TreeViewData::columnsChanged" << std::endl;
+-        #endif
+-
+-        static_cast<TreeViewData*>(data)->updateColumnsCursor();
+-        return;
+-    }
+-
+-    //________________________________________________________________________________
+     gboolean TreeViewData::motionNotifyEvent(GtkWidget* widget, GdkEventMotion* event, gpointer data )
+     {
+ 
+--- origsrc/oxygen-gtk3-1.0.0/src/animations/oxygentreeviewdata.h	2012-01-16 02:46:33.000000000 -0600
++++ src/oxygen-gtk3-1.0.0/src/animations/oxygentreeviewdata.h	2012-02-13 00:35:51.636195000 -0600
+@@ -87,9 +87,6 @@ namespace Oxygen
+         //! set mouse over state
+         virtual bool setHovered( GtkWidget* widget, bool value );
+ 
+-        //! update columns cursor
+-        void updateColumnsCursor( void ) const;
+-
+         //! update hovered cell based on pointer position
+         void updatePosition( GtkWidget*, int x, int y );
+ 
+@@ -136,7 +133,6 @@ namespace Oxygen
+         //@{
+         static gboolean childDestroyNotifyEvent( GtkWidget*, gpointer );
+         static void childValueChanged( GtkRange*, gpointer );
+-        static void columnsChanged( GtkTreeView*, gpointer );
+         static gboolean motionNotifyEvent( GtkWidget*, GdkEventMotion*, gpointer );
+         //@}
+ 

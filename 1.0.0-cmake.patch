@@ -1,0 +1,11 @@
+--- origsrc/oxygen-gtk-1.1.2/src/CMakeLists.txt
++++ src/oxygen-gtk-1.1.2/src/CMakeLists.txt
+@@ -68,7 +68,7 @@ set( oxygen_gtk_SOURCES
+     oxygenwindowshadow.cpp
+ )
+ 
+-add_library( oxygen-gtk SHARED ${oxygen_gtk_SOURCES} )
++add_library( oxygen-gtk MODULE ${oxygen_gtk_SOURCES} )
+ 
+ # Add debug cflags
+ set( CMAKE_CXX_FLAGS " -Wall -g ${CMAKE_CXX_FLAGS}" )
