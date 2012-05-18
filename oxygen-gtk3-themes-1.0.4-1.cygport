@@ -8,5 +8,4 @@ SRC_URI="mirror://kde/stable/${ORIG_PN}/${PV}/src/${ORIG_PN}-${PV}.tar.bz2"
 PATCH_URI="
 	1.0.0-cmake.patch
 	1.0.0-isnan.patch
-	1.0.0-no-undefined.patch
 "
