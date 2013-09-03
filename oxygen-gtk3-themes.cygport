@@ -1,0 +1,20 @@
+inherit cmake
+
+NAME="oxygen-gtk3-themes"
+VERSION=1.2.0
+RELEASE=1
+CATEGORY="KDE"
+SUMMARY="GTK+3 Oxygen theme engine"
+DESCRIPTION="Oxygen-Gtk is a port of the default KDE widget theme (Oxygen), to
+GTK+. It's primary goal is to ensure visual consistency between GTK+-based and
+Qt-based applications running under KDE. A secondary objective is to also have
+a stand-alone nice looking GTK+ theme that would behave well on other Desktop
+Environments."
+REQUIRES="oxygen-icons"
+HOMEPAGE="http://www.kde.org/"
+SRC_URI="mirror://kde/stable/oxygen-gtk3/${VERSION}/src/oxygen-gtk3-${VERSION}.tar.bz2"
+SRC_DIR="oxygen-gtk3-${VERSION}"
+PATCH_URI="
+	1.0.0-cmake.patch
+	1.2.0-cygwin.patch
+"

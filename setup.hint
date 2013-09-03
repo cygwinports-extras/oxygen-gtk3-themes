@@ -1,8 +1,0 @@
-category: KDE
-requires: libcairo2 libdbus-glib_1_2 libdbus1_3 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk3_0 libpango1.0_0 libstdc++6 libX11_6 oxygen-icons
-sdesc: "GTK+3 Oxygen theme engine"
-ldesc: "Oxygen-Gtk is a port of the default KDE widget theme (Oxygen), 
-to GTK+. It's primary goal is to ensure visual consistency between 
-GTK+-based and Qt-based applications running under KDE. A secondary 
-objective is to also have a stand-alone nice looking GTK+ theme that 
-would behave well on other Desktop Environments."
