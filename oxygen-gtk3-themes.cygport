@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="oxygen-gtk3-themes"
-VERSION=1.3.3
+VERSION=1.3.5
 RELEASE=1
 CATEGORY="KDE"
 SUMMARY="GTK+3 Oxygen theme engine"
